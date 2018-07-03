@@ -4,11 +4,23 @@ services:
     image: redis:latest
   mongodb:
     image: mongo:latest
-    container_name: "mongodb"
+    container_name: mongodb
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
+      - MONGO_INITDB_DATABASE=sc_sample
+      - MONGO_INITDB_ROOT_USERNAME=yepapa
+      - MONGO_INITDB_ROOT_PASSWORD=yepapa
     volumes:
       - /data/db:/data/db
     ports:
       - 27017:27017
+
+  mongoClientTemp:
+     image: mongo:latest
+     container_name: mongoClientTemp
+     links:
+      - mongodb:mongodb
+     command: mongo --host mongodb --eval  "db.getSiblingDB('sc_sample').createUser({user:'yepapa', pwd:'yepapa', roles:[{role:'readWrite',db:'sc_sample'}]});"
+     depends_on:
+      - mongodb

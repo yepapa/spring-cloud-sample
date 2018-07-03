@@ -9,6 +9,11 @@ https://www.concretepage.com/forum/thread?qid=531
 
 # User Service
 
+
+```
+mongo admin -uyepapa -pyepap
+```
+
 ```
 use sc_sample
 ```

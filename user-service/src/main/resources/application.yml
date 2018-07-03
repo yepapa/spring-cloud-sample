@@ -16,3 +16,11 @@ eureka:
     service-url:
       defaultZone: http://yepapa:yepapa@localhost:8761/eureka/
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
