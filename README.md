@@ -25,7 +25,7 @@ https://www.concretepage.com/forum/thread?qid=531
 
 
 ```
-mongo admin -uyepapa -pyepap
+mongo admin -uyepapa -pyepapa
 ```
 
 ```

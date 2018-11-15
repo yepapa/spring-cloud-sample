@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: gateway-zuul
+  sleuth:
+    sampler:
+      probability: 1
 
 eureka:
   client:
@@ -26,5 +29,4 @@ zuul:
       serviceId: user-service
   ribbon-isolation-strategy: thread
   strip-prefix: true
-
 

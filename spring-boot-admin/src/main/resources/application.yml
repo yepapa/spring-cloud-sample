@@ -1,6 +1,11 @@
 spring:
   application:
     name: spring-boot-admin2
+  boot:
+    admin:
+      ui:
+        brand: "<img src=\"assets/img/icon-spring-boot-admin.svg\"><span>YeThree Boot Admin</span>"
+        title: "YeThree Boot Admin"
 
 server:
   port: 9999
@@ -18,3 +23,4 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
