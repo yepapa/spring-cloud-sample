@@ -26,7 +26,7 @@ repositories {
 
 ext {
     springBootAdminVersion = '2.0.4'
-    springCloudVersion = 'Finchley.RELEASE'
+    springCloudVersion = 'Finchley.SR2'
 }
 
 dependencies {
