@@ -24,3 +24,6 @@ management:
     health:
       show-details: ALWAYS
 
+#spring.boot.admin.ui.cache.no-cache: true
+#spring.boot.admin.ui.extension-resource-locations: file:/data/workspace_oss/spring-boot-admin/spring-boot-admin-samples/spring-boot-admin-sample-custom-ui/target/dist/
+#spring.boot.admin.ui.cache-templates: false
