@@ -24,3 +24,7 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+logging:
+  level:
+    com.yejpapa: debug
