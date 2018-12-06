@@ -7,6 +7,7 @@
 | gateway-zuul        | 8765 |
 | gateway-cloud       | 8766 |
 | user-service        | 8090 |
+| websocket-server    | 8091 |
 | config-service      | 8888 |
 | eureka-service      | 8761 |
 | spring-boot-admin2  | 9999 |

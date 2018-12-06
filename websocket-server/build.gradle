@@ -1,0 +1,52 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.yepapa'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+ext['springCloudVersion'] = 'Greenwich.M3'
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-actuator')
+    implementation('org.springframework.boot:spring-boot-starter-security')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-websocket')
+    implementation('org.springframework.cloud:spring-cloud-starter-config')
+    implementation('org.springframework.security:spring-security-messaging')
+    runtimeOnly('org.springframework.boot:spring-boot-devtools')
+    runtimeOnly('org.webjars:webjars-locator-core')
+    runtimeOnly('org.webjars:sockjs-client:1.0.2')
+    runtimeOnly('org.webjars:stomp-websocket:2.3.3')
+    runtimeOnly('org.webjars:bootstrap:3.3.7')
+    runtimeOnly('org.webjars:jquery:3.1.0')
+    
+    compileOnly('org.projectlombok:lombok')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation('org.springframework.security:spring-security-test')
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
