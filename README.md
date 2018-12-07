@@ -54,3 +54,8 @@ get user list through gateway
 ```
 http :8765/user/users
 ```
+
+
+# Study
+
+https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_recognizing_dependencies  

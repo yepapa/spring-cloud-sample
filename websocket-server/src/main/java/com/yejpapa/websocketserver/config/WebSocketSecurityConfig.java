@@ -1,4 +1,4 @@
-package com.yejpapa.websocketserver;
+package com.yejpapa.websocketserver.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.messaging.MessageSecurityMetadataSourceRegistry;

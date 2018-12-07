@@ -1,4 +1,4 @@
-package com.yejpapa.websocketserver;
+package com.yejpapa.websocketserver.domain;
 
 public class Greeting {
 

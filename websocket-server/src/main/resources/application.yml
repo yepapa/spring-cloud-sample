@@ -4,5 +4,9 @@ server:
 spring:
   security:
     user:
-      name: user
-      password: user
+      name: yepapa
+      password: password
+
+logging:
+  level:
+    com.yejpapa.websocketserver: debug
